@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rock_Paper_Scissors</title>
+  <title>Rock Paper Scissors</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -12,15 +12,15 @@
   <p>Rock Paper Scissors</p>
 
   <button onclick="
-    playGame('rock')
+    playGame('rock');
   ">Rock</button>
 
   <button onclick="
-    playGame('paper')">
-    Paper</button>
+    playGame('paper');
+    ">Paper</button>
 
   <button onclick="
-    playGame('scissors')
+    playGame('scissors');
   ">Scissors</button>
 
   <button onclick="
@@ -31,7 +31,8 @@
   ">Reset Score</button>
 
     <script>
-      const score = JSON.parse(localStorage.getItem('score')) || {
+      let score = JSON.parse(localStorage.getItem
+      ('score')) || {
         wins: 0,
         losses: 0,
         ties: 0
@@ -45,7 +46,7 @@
       //   };
       // }
 
-      function pickComputerMove() {
+      function playGame(playerMove) {
         const computerMove = pickComputerMove();
   
           let result = '';
